@@ -1,5 +1,5 @@
 {
-  "name": "aws-training",
+  "name": "part-1",
   "version": "1.0.0",
   "description": "",
   "main": "ec2-sdk.js",
@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aws-sdk/client-ec2": "^3.175.0",
-    "aws-sdk": "^2.1221.0"
+    "@aws-sdk/client-ec2": "^3.177.0"
   }
 }
