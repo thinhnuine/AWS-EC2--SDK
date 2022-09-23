@@ -1,11 +1,9 @@
-// Import required AWS SDK clients and commands for Node.js
 const {
   CreateTagsCommand,
   RunInstancesCommand,
   EC2Client
 } = require("@aws-sdk/client-ec2");
-// Set the AWS Region.
-const REGION = "ap-southeast-1"; //e.g. "us-east-1"
+const REGION = "ap-southeast-1"; 
 // Create anAmazon EC2 service client object.
 const ec2Client = new EC2Client({ region: REGION });
 
@@ -25,7 +23,6 @@ const run = async () => {
     console.log(data.Instances[0].InstanceId);
     const instanceId = data.Instances[0].InstanceId;
     console.log("Created instance", instanceId);
-    // Add tags to the instance
     const tagParams = {
       Resources: [instanceId],
       Tags: [
